@@ -1,0 +1,27 @@
+penapi: 3.1.0
+info:
+    title: User API
+    version: 1.0.0
+paths: {}
+components:
+    schemas:
+     User:
+      type: object
+      properties:
+        name:
+          type: string
+        email:
+          type: string
+          format: email
+          description: The email address of the user.
+          pattern: ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$
+          example: info@skunkworks.africa
+        age:
+          type: integer
+          minimum: 0
+          maximum: 150
+        required:
+          - name
+          - email
+          - age
+
