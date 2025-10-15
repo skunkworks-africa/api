@@ -1,49 +1,220 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Begin Jekyll SEO tag v2.8.0 -->
-  <title>api-endpoints</title>
-  <meta name="generator" content="Jekyll v3.9.5" />
-  <meta property="og:title" content="api-endpoints" />
-  <meta property="og:locale" content="en_US" />
-  <link rel="canonical" href="https://skunkworksza.github.io/api-endpoints/" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>API Endpoints | Skunkworks</title>
+  <meta name="description" content="Explore the API endpoints provided by Skunkworks for developers and partners." />
+  <meta property="og:title" content="API Endpoints" />
   <meta property="og:url" content="https://skunkworksza.github.io/api-endpoints/" />
-  <meta property="og:site_name" content="api-endpoints" />
+  <meta property="og:site_name" content="Skunkworks API Endpoints" />
   <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary" />
-  <meta property="twitter:title" content="api-endpoints" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "headline": "api-endpoints",
-    "name": "api-endpoints",
-    "url": "https://skunkworksza.github.io/api-endpoints/"
-  }
-  </script>
-  <!-- End Jekyll SEO tag -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="API Endpoints by Skunkworks" />
 
-  <link rel="stylesheet" href="/api-endpoints/assets/css/style.css?v=2a0c8f968dedad7294f17e6a9a185c949936afbc">
+  <link rel="icon" href="/api-endpoints/favicon.ico" />
+  <style>
+    :root {
+      --bg: #f9fafb;
+      --text: #1f2937;
+      --accent: #2563eb;
+      --border: #e5e7eb;
+    }
+    [data-theme="dark"] {
+      --bg: #111827;
+      --text: #f9fafb;
+      --border: #374151;
+      --accent: #60a5fa;
+    }
 
-  <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
-
-  <!-- Setup Google Analytics -->
-
-  <!-- You can set your favicon here -->
-  <!-- link rel="shortcut icon" type="image/x-icon" href="/api-endpoints/favicon.ico" -->
-
-  <!-- end custom head snippets -->
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+      padding: 0.8rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header h1 {
+      font-size: 1.2rem;
+      margin: 0;
+      color: var(--accent);
+    }
+    header button {
+      background: none;
+      border: none;
+      color: var(--text);
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    main {
+      padding: 2rem 5%;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .search-bar {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 1rem;
+    }
+    .search-bar input {
+      padding: 0.5rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      width: 100%;
+      max-width: 250px;
+      background: transparent;
+      color: var(--text);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 0.8rem;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background: var(--accent);
+      color: #fff;
+    }
+    tr:hover {
+      background: rgba(37, 99, 235, 0.05);
+    }
+    pre {
+      background: #1e293b;
+      color: #f8fafc;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      border-top: 1px solid var(--border);
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      th, td {
+        font-size: 0.9rem;
+      }
+      main {
+        padding: 1rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <div class="container-lg px-3 my-5 markdown-body">
-    <h1 id="api-endpoints">api-endpoints</h1>
-    <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray"> This site is open source. <a href="https://github.com/skunkworksza/api-endpoints/edit/main/README.md">Improve this page</a>. </div>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
-  <script>anchors.add();</script>
+  <header>
+    <h1>🔗 API Endpoints</h1>
+    <button id="theme-toggle">🌙</button>
+  </header>
+
+  <main>
+    <p>Welcome to the <strong>Skunkworks API Directory</strong> — a live catalog of endpoints for integration with our cloud, learning, and automation platforms.</p>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search endpoints..." onkeyup="filterTable()" />
+    </div>
+
+    <table id="apiTable">
+      <thead>
+        <tr>
+          <th>Endpoint</th>
+          <th>Method</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>/api/v1/users</td>
+          <td>GET</td>
+          <td>Fetch all registered users</td>
+        </tr>
+        <tr>
+          <td>/api/v1/users/:id</td>
+          <td>GET</td>
+          <td>Retrieve user details by ID</td>
+        </tr>
+        <tr>
+          <td>/api/v1/auth/login</td>
+          <td>POST</td>
+          <td>Authenticate user and return JWT token</td>
+        </tr>
+        <tr>
+          <td>/api/v1/data/upload</td>
+          <td>POST</td>
+          <td>Upload dataset or file for processing</td>
+        </tr>
+        <tr>
+          <td>/api/v1/status</td>
+          <td>GET</td>
+          <td>Check system uptime and API version</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Example Usage</h2>
+    <pre><code>curl -X POST https://api.skunkworks.africa/v1/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"email":"admin@skunkworks.africa","password":"secret"}'</code></pre>
+
+    <p>You can view or contribute to this documentation on 
+      <a href="https://github.com/skunkworksza/api-endpoints">GitHub</a>.
+    </p>
+  </main>
+
+  <footer>
+    <p>This project is open source. <a href="https://github.com/skunkworksza/api-endpoints/edit/main/README.md">Improve this page</a>.</p>
+    <p>© 2025 Skunkworks Africa — Crafted with ⚙️, ☕, and AI.</p>
+  </footer>
+
+  <script>
+    // Table filter
+    function filterTable() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const rows = document.querySelectorAll("#apiTable tbody tr");
+      rows.forEach(row => {
+        row.style.display = row.textContent.toLowerCase().includes(input) ? "" : "none";
+      });
+    }
+
+    // Theme toggle
+    const themeToggle = document.getElementById("theme-toggle");
+    const currentTheme = localStorage.getItem("theme") || "light";
+    document.body.setAttribute("data-theme", currentTheme);
+    themeToggle.textContent = currentTheme === "dark" ? "☀️" : "🌙";
+
+    themeToggle.addEventListener("click", () => {
+      const theme = document.body.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      document.body.setAttribute("data-theme", theme);
+      localStorage.setItem("theme", theme);
+      themeToggle.textContent = theme === "dark" ? "☀️" : "🌙";
+    });
+  </script>
 </body>
 </html>
